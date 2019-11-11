@@ -1,0 +1,151 @@
+<style>
+/* POPEYES FONTS */
+/* Uncomment font files below, and then update the design tokens references to use them in your application */
+
+/* Brand-specific Fonts */
+/* Central Avenue Bold */
+@font-face {
+  font-family: 'central_avenue_bold';
+  src: url('central_avenue.otf') format('opentype'), url('central_avenue.woff2') format('woff2'),
+    url('central_avenue.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'chicken_sans_bold';
+  src: url('ChickenSans-Bold.otf') format('opentype'), url('ChickenSans-Bold.woff2') format('woff2'),
+    url('ChickenSans-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'chicken_sans';
+  src: url('ChickenSans-Regular.otf') format('opentype'), url('ChickenSans-Regular.woff2') format('woff2'),
+    url('ChickenSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'chicken_sans_xlight';
+  src: url('ChickenSans-ExtraLight.otf') format('opentype'), url('ChickenSans-ExtraLight.woff2') format('woff2'),
+    url('ChickenSans-ExtraLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Brand-specific Font Sizes */
+/* Desktop */
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.625rem;
+  }
+  h3 {
+    font-size: 1.375rem;
+  }
+  h4 {
+    font-size: 1.125rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
+  h4 {
+    font-size: 1.125rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+}
+#two{
+box-sizing: border-box;
+    color: rgb(31, 31, 31);
+    -webkit-font-smoothing: antialiased;
+    font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 225%;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+#three{
+	
+    text-align: center;
+    text-transform: uppercase;
+    font-family: central_avenue_bold, sans-serif;
+    line-height: 1.1;
+    font-size: 3rem;
+}
+#four{
+box-sizing: border-box;
+    color: rgb(31, 31, 31);
+    -webkit-font-smoothing: antialiased;
+    font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 225%;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+</style>
+<img src = "top.png" width="100%" height="30%">
+
+
+<p id="two" > Reedeem in the next</p>
+
+<p id="three">3 Tenders, Regular Side And Biscuit</p>
+<img src = "gif.gif" width="100%" height="30%">
+<p id= "four"></p>
+<script>
+var today = new Date();
+var dd = String(today.getDate()+1).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '/' + (dd) + '/' + yyyy;
+document.getElementById('four').innerText= `One per customer. No substitutions. Non valid on delivery or with other coupons or offers. Available at participating US Popeyes® locations (except AK & HI). Void where prohibited or if reproduced, altered or transferred. Tax may apply. Cash value at 1/100¢. TM & © 2019 PLKI. All rights Reserved. Expires `+ today
+function timer(time){
+    var sec = 59;
+    var timer = setInterval(function(){
+        document.getElementById('two').innerText='Reedem in the next '+time+':'+sec;
+        sec--;
+        if (sec < 0) {
+            timer(time-1);
+        }
+    }, 1000);
+
+}
+timer(14)
+</script>
