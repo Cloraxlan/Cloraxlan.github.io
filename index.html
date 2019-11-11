@@ -144,7 +144,8 @@ function timer(time){
         document.getElementById('two').innerText='Reedem in the next '+time+':'+sec;
         sec--;
         if (sec < 0) {
-            timer(time-1);
+            sec = 59;
+		time--;
         }
     }, 1000);
 
